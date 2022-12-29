@@ -82,7 +82,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 40,
                     child: ElevatedButton(
                       onPressed: () {
-                        if (_keyForm.currentState!.validate()) {}
+                        if (_keyForm.currentState!.validate()) {
+                          Navigator.pushReplacementNamed(context, '/home');
+                        }
                       },
                       child: const Text(
                         "S'Authentifier",

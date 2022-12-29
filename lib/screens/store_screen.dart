@@ -1,21 +1,15 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:workshop/widgets/card_info.dart';
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class StoreScreen extends StatelessWidget {
+  const StoreScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "G-Store Esprit",
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-      ),
-      body: SingleChildScrollView(
+      body : SingleChildScrollView(
         child: Column(
           children: const [
             CardInfo(
@@ -45,7 +39,7 @@ class Home extends StatelessWidget {
             ),
           ],
         ),
-      ),
+      )
     );
   }
 }
