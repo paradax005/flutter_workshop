@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:workshop/widgets/grid_card.dart';
 
 class LibraryScreen extends StatefulWidget {
-  LibraryScreen({super.key});
+  const LibraryScreen({super.key});
 
   @override
   State<LibraryScreen> createState() => _LibraryScreenState();
@@ -20,25 +20,20 @@ class _LibraryScreenState extends State<LibraryScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Ma bibliothéque"),
+    return GridView.builder(
+      itemCount: games.length,
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        mainAxisExtent: 160,
+        mainAxisSpacing: 5,
+        crossAxisSpacing: 5,
       ),
-      body: GridView.builder(
-        itemCount: games.length,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          mainAxisExtent: 160,
-          mainAxisSpacing: 5,
-          crossAxisSpacing: 5,
-        ),
-        itemBuilder: (BuildContext context, index) {
-          return GridCard(
-            imagePath: games[index].imagePath,
-            title: games[index].title,
-          );
-        },
-      ),
+      itemBuilder: (BuildContext context, index) {
+        return GridCard(
+          imagePath: games[index].imagePath,
+          title: games[index].title,
+        );
+      },
     );
   }
 }
