@@ -98,7 +98,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         backgroundColor:
                             MaterialStateProperty.all<Color>(Colors.red),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/signup');
+                      },
                       child: const Text(
                         "Créer un compte",
                       ),

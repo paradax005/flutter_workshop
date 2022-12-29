@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:workshop/screens/home.dart';
-import 'package:workshop/screens/login_screen.dart';
+import 'package:workshop/screens/libray_screen.dart';
+import 'package:workshop/screens/signup_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,10 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/': (BuildContext context) {
-          return const LoginScreen();
+          return LibraryScreen();
+        },
+        '/signup': (BuildContext context) {
+          return const SignUpScreen();
         },
         '/home': (BuildContext context) {
           return const Home();
