@@ -8,8 +8,6 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        centerTitle: true,
         title: const Text(
           "G-Store Esprit",
           style: TextStyle(
